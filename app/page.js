@@ -1,10 +1,12 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import styles from './page.module.scss';
+import Faq from './components/faq/Faq';
+import Lesson from './components/lesson/Lesson';
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      
+      <Lesson />
+      <Faq/>
     </main>
   )
 }

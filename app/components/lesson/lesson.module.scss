@@ -1,0 +1,39 @@
+.wrapper {
+  width: 100%;
+  background: url('../../../public/img/lesson/lesson.png') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.lesson__wrapper {
+  display: flex;
+  width: 100%;
+  margin-top: 25px;
+  align-items: center;
+  justify-content: space-between;
+}
+.lesson__video {
+  flex: 1 1 50%;
+}
+
+.lesson__group {
+  flex: 1 1 50%;
+  padding-left: 60px;
+}
+.lesson__item {
+  font-size: 28px;
+  font-weight: 700;
+  cursor: pointer;
+
+  & a {
+    color: var(--light-color);
+    text-shadow: var(--primary-color) 3px 3px 10px;
+    transition: all var(--transition);
+  }
+  &:not(:last-child) {
+    margin-bottom: 35px;
+  }
+
+  &:hover a {
+    border-bottom: 3px solid var(--light-color);
+  }
+}

@@ -1,0 +1,57 @@
+.wrapper {
+  width: 100%;
+  background: url('../../../public/img/faq/faq.png') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.list {
+  text-align: center;
+  margin-top: 25px;
+}
+.item {
+  display: block;
+  border-radius: 30px;
+  background: rgba(217, 217, 217, 0.708);
+  padding: 40px;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-bottom: 35px;
+  }
+}
+.title {
+  padding: 0px 30px 0px 0px;
+  display: flex;
+  text-align: center;
+  display: inline-block;
+  font-size: 26px;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 600;
+
+  &::after {
+    content: "";
+    width: 25px;
+    height: 25px;
+    background: url("../../../public/img/faq/arrow.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.4s ease 0s;
+    display: inline-block;
+    margin-left: 15px;
+  }
+
+  &.deg {
+    margin-bottom: 40px;
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.text {
+  font-size: 26px;
+  font-weight: 600;
+  overflow: hidden;
+  transition: height var(--transition);
+}

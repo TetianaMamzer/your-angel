@@ -1,8 +1,8 @@
-import css from './title.module.scss';
+import style from './title.module.scss';
 
 const Title = ({ text, light }) => {
   
-  const fullNameStyle = light ? `${css.title} ${css.light}` : `${css.title}`
+  const fullNameStyle = light ? `${style.title} ${style.light}` : `${style.title}`
   return (
     <>
       <h2 className={fullNameStyle}>{text}</h2>
