@@ -1,0 +1,54 @@
+.header {
+  border: 1px solid red;
+}
+
+.headerContainer {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 700;
+}
+
+.mainLogo {
+  width: 220px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.mainText {
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.firstPartPhrase {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.text {
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+.buttonCallMe {
+  background-color: var(--primary-color);
+  border-radius: 15px;
+  color: var(--light-color);
+  padding: 10px 15px;
+  font-size: 10px;
+  text-decoration: underline;
+  font-weight: 700;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.iconMenu {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  color: var(--primary-color);
+  left: 100px;
+  bottom: 10px;
+}
