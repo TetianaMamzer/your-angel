@@ -29,8 +29,6 @@ const icons = [
   },
 ];
 
-console.log(icons);
-
 const ListSocialIcons = () => {
   return (
     <ul className={style.listIcons}>
@@ -39,8 +37,8 @@ const ListSocialIcons = () => {
           <li key={icon.id}>
             <Image
               src={icon.src}
-              width={20}
-              height={20}
+              width={30}
+              height={30}
               alt="social media icon"
               className={style.socialIcon}
             />
@@ -52,19 +50,3 @@ const ListSocialIcons = () => {
 };
 
 export default ListSocialIcons;
-
-{
-  /* <ul className={style.listIcons}>
-      {icons.map((icon) => {
-        <li key={icon.id}>
-          <Image
-      src={telegram}
-      width={20}
-      height={20}
-      alt="social media icon"
-      className={style.socialIcon}
-    />
-        </li>;
-      })}
-    </ul> */
-}

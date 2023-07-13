@@ -5,6 +5,7 @@ import Image from "next/image";
 import img from "../../../public/img/container/main-logo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import ListSocialIcons from "../../share/listSocialIcons/listSocialIcons";
+import ListNavigation from "../../share/listNavigation/listNavigation";
 
 const Header = () => {
   const screenWidth = window.screen.width;
@@ -60,7 +61,7 @@ const Header = () => {
                 <button className={style.buttonBasket}>КОШИК</button>
               </div>
             </div>
-            <div className={style.navigation}></div>
+            <ListNavigation />
           </div>
         )}
       </Container>
