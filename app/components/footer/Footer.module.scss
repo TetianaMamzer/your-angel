@@ -9,6 +9,10 @@
   justify-content: space-between;
 }
 
+.footerContainer div {
+  flex-basis: calc((100% - 2 * 3px) / 3);
+}
+
 .mainLogo {
   width: 62px;
   height: 25px;
@@ -36,11 +40,6 @@
   margin-bottom: 8px;
 }
 
-.firstPartPhrase {
-  margin-bottom: 3px;
-  display: block;
-}
-
 .buttonOrderBuqet {
   background-color: var(--primary-color);
   border-radius: 15px;
@@ -52,9 +51,17 @@
 
 .contacts {
   font-size: 12px;
-  margin-bottom: 10px;
+  line-height: 1.9;
+  width: 100px;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-.text {
+.timeForWork {
   font-size: 10px;
+  line-height: 1.2;
+  width: 100px;
+  text-align: end;
 }

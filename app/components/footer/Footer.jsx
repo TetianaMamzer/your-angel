@@ -10,15 +10,11 @@ const Footer = () => {
       <Container>
         <div className={style.footerContainer}>
           <div className={style.div1}>
-            <p className={style.mainText}>
-              <span className={style.firstPartPhrase}>Майстерня їстівних</span>
-              <span>букетів “Your Angel”</span>
+            <p className={`${style.mainText} ${style.mainText_name}`}>
+              Майстерня їстівних букетів “Your Angel”
             </p>
-            <p className={style.mainText}>
-              <span className={style.firstPartPhrase}>
-                Кур'єрськая доставка
-              </span>
-              <span>по Полтаві</span>
+            <p className={`${style.mainText} ${style.mainText_delivery}`}>
+              Кур'єрськая доставка по Полтаві
             </p>
           </div>
           <div className={style.div2}>
@@ -26,10 +22,10 @@ const Footer = () => {
             <button className={style.buttonOrderBuqet}>ЗАМОВИТИ БУКЕТ</button>
           </div>
           <div className={style.div3}>
-            <p className={style.contacts}>+380 67 957 8784</p>
-            <p className={style.contacts}>+380 99 144 2079</p>
-            <p className={style.text}>пн-пт 9:00-19:00</p>
-            <p className={style.text}>сб-вс 9:00-18:00</p>
+            <p className={style.contacts}>+380 67 957 8784 +380 99 144 2079</p>
+            <p className={style.timeForWork}>
+              пн-пт 9:00-19:00 сб-вс 9:00-18:00
+            </p>
           </div>
         </div>
       </Container>
