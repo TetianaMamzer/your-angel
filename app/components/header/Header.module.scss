@@ -19,18 +19,25 @@
 
 .mainText {
   font-size: 12px;
+  line-height: 1.9;
   text-align: center;
-  margin-bottom: 10px;
-}
-
-.firstPartPhrase {
-  margin-bottom: 10px;
   display: block;
 }
 
-.text {
+.mainText_name {
+  width: 200px;
+}
+
+.mainText_delivery {
+  width: 240px;
+}
+
+.timeForWork {
   font-size: 10px;
+  line-height: 1.9;
   margin-bottom: 10px;
+  width: 100px;
+  text-align: center;
 }
 
 .buttonCallMe {

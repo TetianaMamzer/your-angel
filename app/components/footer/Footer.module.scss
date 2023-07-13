@@ -4,9 +4,13 @@
 }
 
 .footerContainer {
-  padding: 10px 0px;
+  padding-top: 10px;
   display: flex;
   justify-content: space-between;
+}
+
+.footerContainer div {
+  flex-basis: calc((100% - 2 * 3px) / 3);
 }
 
 .mainLogo {
@@ -33,12 +37,7 @@
 }
 
 .mainText {
-  margin-bottom: 3px;
-}
-
-.firstPartPhrase {
-  margin-bottom: 3px;
-  display: block;
+  margin-bottom: 8px;
 }
 
 .buttonOrderBuqet {
@@ -52,9 +51,17 @@
 
 .contacts {
   font-size: 12px;
-  margin-bottom: 10px;
+  line-height: 1.9;
+  width: 100px;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-.text {
+.timeForWork {
   font-size: 10px;
+  line-height: 1.2;
+  width: 100px;
+  text-align: end;
 }
