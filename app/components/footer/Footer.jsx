@@ -2,7 +2,6 @@ import style from "./Footer.module.scss";
 import Container from "../../share/container/Container";
 import Image from "next/image";
 import img from "../../../public/img/container/main-logo.png";
-// import { GiHamburgerMenu } from "react-icons/gi";
 
 const Footer = () => {
   return (

@@ -6,12 +6,15 @@
   margin: 0 auto;
   border: 1px solid green;
 
-  @media (min-width: 720px) {
-    max-width: 720px;
-    
+
+  @media screen and (min-width: 480px) and (max-width: 768px) {
+    max-width: 768px;
   }
 
-  @media (min-width: 1200px) {
+  
+
+  @media screen and (min-width: 1200px) {
+
     max-width: 1200px;
   }
 }
