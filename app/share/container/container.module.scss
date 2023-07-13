@@ -6,4 +6,12 @@
   /* padding: 45px 30px; */
   margin: 0 auto;
   border: 1px solid green;
+
+  @media screen and (min-width: 480px) and (max-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+  }
 }
