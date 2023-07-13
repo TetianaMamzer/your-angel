@@ -3,7 +3,6 @@ import Container from "../../share/container/Container";
 import Image from "next/image";
 import img from "../../../public/img/container/main-logo.png";
 
-
 const Footer = () => {
   return (
     <footer className={style.footer}>
