@@ -9,10 +9,11 @@ const Lesson = () => {
   return (
     <section className={style.wrapper}>
       <Container>
+        <div className={style.lesson}>
         <Title text="МАЙСТЕР - КЛАСИ" light />
         <div className={style.lesson__wrapper}>
           <div className={style.lesson__video}>
-            <YouTubeVideo videoId={videoId} className={style.video} />
+            <YouTubeVideo videoId={videoId} />
           </div>
           <div className={style.lesson__group}>
             <ul>
@@ -36,6 +37,7 @@ const Lesson = () => {
               </li>
             </ul>
           </div>
+        </div>
         </div>
       </Container>
     </section>

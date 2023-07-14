@@ -7,11 +7,13 @@ const Faq = () => {
   return (
     <section className={style.wrapper}>
       <Container>
+        <div className={style.faq}>
         <Title text="ЧАСТІ ПИТАННЯ" light />
         <div className={style.faq__wrapper}>
           <div className={style.faq__group}>
             <List />
           </div>
+        </div>
         </div>
       </Container>
     </section>

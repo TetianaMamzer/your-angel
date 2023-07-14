@@ -1,0 +1,27 @@
+.listNavigation {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  & li:not(:last-child) {
+    margin-right: 1px;
+  }
+
+  & li:not(:last-child)::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../../../public//img/header/icon-lime.png");
+    margin-left: 5px;
+  }
+}
+
+.navigationItem {
+  font-size: 14px;
+  line-height: 1.12;
+  display: inline-flex;
+  align-items: center;
+}
