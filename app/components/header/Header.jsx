@@ -17,7 +17,7 @@ const Header = () => {
   return (
     <header className={style.header}>
       <Container>
-        {screenWidth <= 480 && (
+        {screenWidth <= 767 && (
           <div className={style.headerContainer}>
             <Image src={img} alt="Main logo" className={style.mainLogo} />
             <p className={`${style.mainText} ${style.mainText_name}`}>
@@ -33,8 +33,9 @@ const Header = () => {
             <GiHamburgerMenu className={style.iconMenu} />
           </div>
         )}
-        {screenWidth > 480 && screenWidth <= 768 && (
+        {screenWidth > 767 && screenWidth <= 1199 && (
           <div className={style.headerContainer}>
+            <div>TEST</div>
             <div className={style.mainInfo}>
               <div className={style.infoAndTimeWork}>
                 <p className={`${style.mainText} ${style.mainText_name}`}>

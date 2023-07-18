@@ -23,7 +23,7 @@
   height: 100px;
   margin-bottom: 10px;
 
-  @media screen and (min-width: 480px) and (max-width: 768px) {
+  @media screen and (min-width: 767px) and (max-width: 1199px) {
     width: 225px;
   }
 }
@@ -34,7 +34,7 @@
   text-align: center;
   display: block;
 
-  @media screen and (min-width: 480px) and (max-width: 768px) {
+  @media screen and (min-width: 767px) and (max-width: 1199px) {
     font-size: 16px;
     text-align: left;
     margin-bottom: 10px;
@@ -44,7 +44,7 @@
 .mainText_name {
   width: 200px;
 
-  @media screen and (min-width: 480px) and (max-width: 768px) {
+  @media screen and (min-width: 767px) and (max-width: 1199px) {
     width: auto;
   }
 }
@@ -52,7 +52,7 @@
 .mainText_delivery {
   width: 240px;
 
-  @media screen and (min-width: 480px) and (max-width: 768px) {
+  @media screen and (min-width: 767px) and (max-width: 1199px) {
     width: auto;
   }
 }
@@ -64,7 +64,7 @@
   width: 100px;
   text-align: center;
 
-  @media screen and (min-width: 480px) and (max-width: 768px) {
+  @media screen and (min-width: 767px) and (max-width: 1199px) {
     font-size: 16px;
     width: 150px;
     text-align: left;
@@ -84,7 +84,7 @@
     text-decoration: underline;
   }
 
-  @media screen and (min-width: 480px) and (max-width: 768px) {
+  @media screen and (min-width: 767px) and (max-width: 1199px) {
     font-size: 22px;
     box-shadow: none;
   }
