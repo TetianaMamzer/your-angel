@@ -1,9 +1,15 @@
+"use client";
 import style from "./Footer.module.scss";
 import Container from "../../share/container/Container";
 import Image from "next/image";
 import img from "../../../public/img/container/main-logo.png";
+import { useEffect, useState } from "react";
 
 const Footer = () => {
+  const [screenWidth, setScreenWidth] = useState(0);
+  useEffect(() => {
+    setScreenWidth(window.innerWidth);
+  }, []);
   return (
     <footer className={style.footer}>
       <Container>
@@ -15,13 +21,21 @@ const Footer = () => {
             <p className={`${style.mainText} ${style.mainText_delivery}`}>
               Кур'єрськая доставка по Полтаві
             </p>
+            {screenWidth > 767 && (
+              <p className={`${style.mainText} ${style.mainText_politics}`}>
+                Політика конфіденційності
+              </p>
+            )}
           </div>
           <div className={style.div2}>
             <Image src={img} alt="Main logo" className={style.mainLogo} />
             <button className={style.buttonOrderBuqet}>ЗАМОВИТИ БУКЕТ</button>
           </div>
           <div className={style.div3}>
-            <p className={style.contacts}>+380 67 957 8784 +380 99 144 2079</p>
+            <p className={style.contacts}>
+              <p className={style.contact1}>+380 67 957 8784</p>
+              <p>+380 99 144 2079</p>
+            </p>
             <p className={style.timeForWork}>
               пн-пт 9:00-19:00 сб-вс 9:00-18:00
             </p>

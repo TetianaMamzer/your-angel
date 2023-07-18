@@ -1,5 +1,4 @@
 .footer {
-  border: 1px solid red;
   background-color: #cec1d4;
   padding-top: 10px;
   padding-bottom: 5px;
@@ -12,16 +11,50 @@
 
 .footerContainer div {
   flex-basis: calc((100% - 2 * 3px) / 3);
+
+  @media screen and (min-width: 767px) and (max-width: 1199px) {
+    flex-basis: auto;
+  }
 }
 
 .mainLogo {
   width: 62px;
   height: 25px;
   margin-bottom: 10px;
+
+  @media screen and (min-width: 767px) and (max-width: 1199px) {
+    width: 124px;
+    height: 50px;
+  }
 }
 
 .div1 {
   font-size: 8px;
+
+  @media screen and (min-width: 767px) and (max-width: 1199px) {
+    font-size: 16px;
+    line-height: 1.12;
+  }
+
+  & p:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.mainText_name {
+  width: 100px;
+
+  @media screen and (min-width: 767px) and (max-width: 1199px) {
+    width: 280px;
+  }
+}
+
+.mainText_delivery {
+  width: 100px;
+
+  @media screen and (min-width: 767px) and (max-width: 1199px) {
+    width: 250px;
+  }
 }
 
 .div2 {
@@ -33,12 +66,18 @@
 .div3 {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: flex-end;
   font-weight: 700;
+
+  @media screen and (min-width: 767px) and (max-width: 1199px) {
+    justify-content: space-between;
+    width: 270px;
+  }
 }
 
-.mainText {
-  margin-bottom: 8px;
+.contact1 {
+  margin-bottom: 5px;
 }
 
 .buttonOrderBuqet {
@@ -48,15 +87,28 @@
   padding: 8px 6px;
   font-size: 8px;
   font-weight: 700;
+
+  @media screen and (min-width: 767px) and (max-width: 1199px) {
+    font-size: 16px;
+    line-height: 1.22;
+    padding: 15px 10px;
+    border-radius: 25px;
+  }
 }
 
 .contacts {
   font-size: 12px;
-  line-height: 1.9;
+  line-height: 1.12;
   width: 100px;
 
   &:hover {
     text-decoration: underline;
+  }
+
+  @media screen and (min-width: 767px) and (max-width: 1199px) {
+    font-size: 24px;
+    line-height: 1.12;
+    width: 200px;
   }
 }
 
@@ -65,4 +117,10 @@
   line-height: 1.2;
   width: 100px;
   text-align: end;
+
+  @media screen and (min-width: 767px) and (max-width: 1199px) {
+    font-size: 20px;
+    line-height: 1.12;
+    width: 200px;
+  }
 }
