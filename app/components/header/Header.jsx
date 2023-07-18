@@ -35,7 +35,6 @@ const Header = () => {
         )}
         {screenWidth > 767 && screenWidth <= 1199 && (
           <div className={style.headerContainer}>
-            <div>TEST</div>
             <div className={style.mainInfo}>
               <div className={style.infoAndTimeWork}>
                 <p className={`${style.mainText} ${style.mainText_name}`}>

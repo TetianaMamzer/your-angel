@@ -1,6 +1,6 @@
 .listNavigation {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
 
   & li:not(:last-child) {
@@ -15,7 +15,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url("../../../public//img/header/icon-lime.png");
-    margin-left: 5px;
+    margin-left: 10px;
   }
 }
 
