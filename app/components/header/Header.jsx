@@ -6,18 +6,21 @@ import img from "../../../public/img/container/main-logo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import ListSocialIcons from "../../share/listSocialIcons/listSocialIcons";
 import ListNavigation from "../../share/listNavigation/listNavigation";
+import { useEffect, useState } from "react";
 
 const Header = () => {
-  const screenWidth = window.screen.width;
+  const [screenWidth, setScreenWidth] = useState(0);
+  useEffect(() => {
+    setScreenWidth(window.innerWidth);
+  }, []);
+
   console.log(screenWidth);
 
-  if (screenWidth > 480) {
-    console.log("sdsdsdsd");
-  }
   return (
     <header className={style.header}>
       <Container>
-        {screenWidth <= 480 && (
+        {screenWidth === 0 && <p>loading</p>}
+        {screenWidth > 0 && screenWidth <= 767 && (
           <div className={style.headerContainer}>
             <Image src={img} alt="Main logo" className={style.mainLogo} />
             <p className={`${style.mainText} ${style.mainText_name}`}>
@@ -33,7 +36,7 @@ const Header = () => {
             <GiHamburgerMenu className={style.iconMenu} />
           </div>
         )}
-        {screenWidth > 480 && screenWidth <= 768 && (
+        {screenWidth > 767 && screenWidth <= 1199 && (
           <div className={style.headerContainer}>
             <div className={style.mainInfo}>
               <div className={style.infoAndTimeWork}>
