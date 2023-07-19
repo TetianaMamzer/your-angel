@@ -7,9 +7,18 @@
   & li:not(:last-child) {
     margin-right: 15px;
   }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 60px;
+  }
 }
 
 .socialIcon {
   width: 30px;
   height: 30px;
+
+  @media screen and (min-width: 1200px) {
+    width: 48px;
+    height: 48px;
+  }
 }

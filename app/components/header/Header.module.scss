@@ -25,6 +25,11 @@
   @media screen and (min-width: 767px) and (max-width: 1199px) {
     width: 225px;
   }
+
+  @media screen and (min-width: 1200px) {
+    width: 400px;
+    height: 180px;
+  }
 }
 
 .mainText {
@@ -38,6 +43,12 @@
     text-align: left;
     margin-bottom: 10px;
   }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 10px;
+  }
 }
 
 .mainText_name {
@@ -46,6 +57,10 @@
   @media screen and (min-width: 767px) and (max-width: 1199px) {
     width: auto;
   }
+
+  @media screen and (min-width: 1200px) {
+    width: 350px;
+  }
 }
 
 .mainText_delivery {
@@ -53,6 +68,10 @@
 
   @media screen and (min-width: 767px) and (max-width: 1199px) {
     width: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 350px;
   }
 }
 
@@ -67,6 +86,12 @@
     font-size: 16px;
     width: 150px;
     text-align: left;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 20px;
+    text-align: left;
+    width: 200px;
   }
 }
 
@@ -86,6 +111,10 @@
   @media screen and (min-width: 767px) and (max-width: 1199px) {
     font-size: 22px;
     box-shadow: none;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
   }
 }
 
@@ -123,6 +152,32 @@
   line-height: 2;
   width: 150px;
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 18px;
+    line-height: 1.12;
+    width: 400px;
+    text-align: center;
+    margin-bottom: 80px;
+  }
+}
+
+.contact1 {
+  margin-right: 0;
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 20px;
+    display: inline-block;
+  }
+}
+
+.contact2 {
+  margin-right: 0;
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 10px;
+    display: inline-block;
+  }
 }
 
 .buttonBasket {
@@ -132,4 +187,20 @@
   color: inherit;
   font-weight: inherit;
   background-color: var(--light-color);
+
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+    margin-top: 0;
+    font-weight: 700;
+    font-family: inherit;
+  }
+}
+
+.navigation {
+  width: 100%;
+  display: flex;
+
+  @media screen and (min-width: 1200px) {
+    justify-content: center;
+  }
 }
