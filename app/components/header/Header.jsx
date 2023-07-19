@@ -68,7 +68,7 @@ const Header = () => {
                 )}
               </div>
               <div className={style.contactsAndBasket}>
-                <ListSocialIcons />
+                <ListSocialIcons size={screenWidth < 1200 ? 30 : 48} />
                 <p className={style.contacts}>
                   <p className={style.contact1}>+380 67 957 8784</p>
                   <p className={style.contact2}>+380 99 144 2079</p>
