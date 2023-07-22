@@ -23,8 +23,6 @@ const navigations = [
   },
 ];
 
-console.log(navigations);
-
 const ListNavigation = () => {
   return (
     <ul className={style.listNavigation}>

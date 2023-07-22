@@ -29,7 +29,7 @@ const icons = [
   },
 ];
 
-const ListSocialIcons = () => {
+const ListSocialIcons = ({ size = "30" }) => {
   return (
     <ul className={style.listIcons}>
       {icons.map((icon) => {
@@ -37,10 +37,9 @@ const ListSocialIcons = () => {
           <li key={icon.id}>
             <Image
               src={icon.src}
-              width={30}
-              height={30}
+              width={size}
+              height={size}
               alt="social media icon"
-              className={style.socialIcon}
             />
           </li>
         );

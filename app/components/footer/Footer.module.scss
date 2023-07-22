@@ -15,6 +15,9 @@
   @media screen and (min-width: 767px) and (max-width: 1199px) {
     flex-basis: auto;
   }
+  @media screen and (min-width: 1200px) {
+    flex-basis: auto;
+  }
 }
 
 .mainLogo {
@@ -26,6 +29,11 @@
     width: 124px;
     height: 50px;
   }
+
+  @media screen and (min-width: 1200px) {
+    width: 280px;
+    height: 120px;
+  }
 }
 
 .div1 {
@@ -34,26 +42,47 @@
   @media screen and (min-width: 767px) and (max-width: 1199px) {
     font-size: 16px;
     line-height: 1.12;
+    width: 35%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 37%;
   }
 
   & p:not(:last-child) {
     margin-bottom: 10px;
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 24px;
   }
 }
 
 .mainText_name {
-  width: 100px;
+  max-width: 100px;
 
   @media screen and (min-width: 767px) and (max-width: 1199px) {
-    width: 280px;
+    max-width: 280px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 280px;
   }
 }
 
 .mainText_delivery {
-  width: 100px;
+  max-width: 100px;
 
   @media screen and (min-width: 767px) and (max-width: 1199px) {
-    width: 250px;
+    max-width: 250px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 350px;
   }
 }
 
@@ -61,6 +90,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (min-width: 767px) and (max-width: 1199px) {
+    width: 33%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: space-around;
+    width: 26%;
+  }
 }
 
 .div3 {
@@ -72,12 +110,29 @@
 
   @media screen and (min-width: 767px) and (max-width: 1199px) {
     justify-content: space-between;
-    width: 270px;
+    max-width: 270px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 37%;
   }
 }
 
 .contact1 {
   margin-bottom: 5px;
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 20px;
+    display: inline-block;
+  }
+}
+
+.contact2 {
+  margin-right: 0;
+
+  @media screen and (min-width: 1200px) {
+    display: inline-block;
+  }
 }
 
 .buttonOrderBuqet {
@@ -94,12 +149,18 @@
     padding: 15px 10px;
     border-radius: 25px;
   }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 24px;
+    padding: 20px 40px;
+    border-radius: 40px;
+  }
 }
 
 .contacts {
   font-size: 12px;
   line-height: 1.12;
-  width: 100px;
+  max-width: 100px;
 
   &:hover {
     text-decoration: underline;
@@ -108,19 +169,33 @@
   @media screen and (min-width: 767px) and (max-width: 1199px) {
     font-size: 24px;
     line-height: 1.12;
-    width: 200px;
+    max-width: 200px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 24px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 30px;
   }
 }
 
 .timeForWork {
   font-size: 10px;
   line-height: 1.2;
-  width: 100px;
+  max-width: 100px;
   text-align: end;
 
   @media screen and (min-width: 767px) and (max-width: 1199px) {
     font-size: 20px;
     line-height: 1.12;
-    width: 200px;
+    max-width: 200px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 24px;
+    max-width: 200px;
   }
 }
