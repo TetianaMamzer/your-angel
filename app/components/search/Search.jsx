@@ -1,7 +1,23 @@
 import style from "./search.module.scss";
 import Container from "@/app/share/container/Container";
+import { bouquets } from "./bouquets.js";
 
 const Search = () => {
+  
+   const elements = bouquets.map((item) => (
+     <li key={item.id} className={style.item}>
+         <div className={style.itemTitleWrapper}>
+           <h3>{item.cаtegoryName}</h3>
+         </div>
+         <div className={style.imageWrapper}>
+           <img
+             className={style.image}
+             src={item.categoryURL}
+             alt="category-image"
+           />
+         </div>
+     </li>
+   ));
 
   return (
     <section className={style.section}>
@@ -11,9 +27,7 @@ const Search = () => {
           Діє система знижок 5%,10%,15% в залежності від загальної кількості
           замовлення однакових букетів
         </p>
-        <ul className={style.list}>
-          <li></li>
-        </ul>
+        <ul className={style.list}>{elements}</ul>
       </Container>
     </section>
   );
