@@ -2,9 +2,8 @@ import style from "./search.module.scss";
 import Container from "@/app/share/container/Container";
 
 const Search = () => {
-
   return (
-    <section className={style.section}>
+    <section id="search" className={style.section}>
       <Container>
         <h2 className={style.title}>Швидкий пошук</h2>
         <p className={style.text}>

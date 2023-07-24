@@ -4,7 +4,7 @@ import css from "./delivery.module.scss";
 
 const Delivery = () => {
   return (
-    <section className={css.deliverySection}>
+    <section id="delivery" className={css.deliverySection}>
       <Container>
         <div className={css.deliveryMainContainer}>
           <h2 className={css.deliveryTitle}>ДОСТАВКА</h2>

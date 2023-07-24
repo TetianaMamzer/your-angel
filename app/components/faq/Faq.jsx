@@ -5,15 +5,15 @@ import Container from "@/app/share/container/Container";
 
 const Faq = () => {
   return (
-    <section className={style.wrapper}>
+    <section id="faqs" className={style.wrapper}>
       <Container>
         <div className={style.faq}>
-        <Title text="ЧАСТІ ПИТАННЯ" light />
-        <div className={style.faq__wrapper}>
-          <div className={style.faq__group}>
-            <List />
+          <Title text="ЧАСТІ ПИТАННЯ" light />
+          <div className={style.faq__wrapper}>
+            <div className={style.faq__group}>
+              <List />
+            </div>
           </div>
-        </div>
         </div>
       </Container>
     </section>
