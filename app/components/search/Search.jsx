@@ -3,7 +3,6 @@ import Container from "@/app/share/container/Container";
 import { bouquets } from "./bouquets.js";
 
 const Search = () => {
-  
    const elements = bouquets.map((item) => (
      <li key={item.id} className={style.item}>
          <div className={style.itemTitleWrapper}>
@@ -20,7 +19,7 @@ const Search = () => {
    ));
 
   return (
-    <section className={style.section}>
+    <section id="search" className={style.section}>
       <Container>
         <h2 className={style.title}>Швидкий пошук</h2>
         <p className={style.text}>

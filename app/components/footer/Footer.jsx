@@ -11,6 +11,7 @@ const Footer = () => {
   useEffect(() => {
     setScreenWidth(window.innerWidth);
   }, []);
+
   return (
     <footer className={style.footer}>
       <Container>
