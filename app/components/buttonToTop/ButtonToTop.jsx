@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import style from "./buttonToTop.module.scss";
+import { FiArrowUp } from "react-icons/fi";
 
 const ButtonToTop = () => {
   const [fromTop, setFromTop] = useState(0);
@@ -25,9 +26,7 @@ const ButtonToTop = () => {
   return (
     <>
       {fromTop > 200 && (
-        <button className={style.buttonToTop} onClick={toTop}>
-          ВВЕРХ
-        </button>
+        <FiArrowUp className={style.buttonToTop} onClick={toTop} />
       )}
     </>
   );
