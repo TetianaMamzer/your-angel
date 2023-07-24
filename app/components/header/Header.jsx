@@ -2,7 +2,6 @@
 import style from "./Header.module.scss";
 import Container from "../../share/container/Container";
 import Image from "next/image";
-import img from "../../../public/img/container/main-logo.png";
 import imgDesktop from "../../../public/img/container/main-logo-desktop.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import ListSocialIcons from "../../share/listSocialIcons/listSocialIcons";
