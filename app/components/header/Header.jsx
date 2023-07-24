@@ -15,8 +15,6 @@ const Header = () => {
     setScreenWidth(window.innerWidth);
   }, []);
 
-  console.log(screenWidth);
-
   return (
     <header className={style.header}>
       <Container>
