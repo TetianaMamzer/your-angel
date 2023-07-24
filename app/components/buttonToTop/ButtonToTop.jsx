@@ -8,11 +8,11 @@ const ButtonToTop = () => {
   const [fromTop, setFromTop] = useState(0);
 
   useEffect(() => {
-    window.addEventListener("scroll", listener);
-    return () => window.removeEventListener("scroll", listener);
+    window.addEventListener("scroll", scrollListener);
+    return () => window.removeEventListener("scroll", scrollListener);
   }, []);
 
-  function listener() {
+  function scrollListener() {
     setFromTop(window.pageYOffset);
   }
 
