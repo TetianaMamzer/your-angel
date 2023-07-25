@@ -7,16 +7,24 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import ListSocialIcons from "../../share/listSocialIcons/listSocialIcons";
 import ListNavigation from "../../share/listNavigation/listNavigation";
 import { useEffect, useState } from "react";
+import Modal from "../modal/Modal";
 
 const Header = () => {
+  const [showModal, setShowModal] = useState(false);
   const [screenWidth, setScreenWidth] = useState(0);
   useEffect(() => {
     setScreenWidth(window.innerWidth);
   }, []);
 
+  const showModalMenu = () => {
+    console.log("open Modal");
+    setShowModal(true);
+  };
+
   return (
     <header className={style.header}>
       <Container>
+        {showModal ? <Modal /> : null}
         {screenWidth === 0 && <p>loading</p>}
         {screenWidth > 0 && screenWidth <= 767 && (
           <div className={style.headerContainer}>
@@ -35,7 +43,10 @@ const Header = () => {
               пн-пт 9:00-19:00 сб-вс 9:00-18:00
             </p>
             <button className={style.buttonCallMe}>ПЕРЕДЗВОНІТЬ МЕНІ</button>
-            <GiHamburgerMenu className={style.iconMenu} />
+            <GiHamburgerMenu
+              className={style.iconMenu}
+              onClick={showModalMenu}
+            />
           </div>
         )}
         {screenWidth > 767 && (
