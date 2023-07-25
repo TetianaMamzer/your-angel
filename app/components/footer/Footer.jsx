@@ -39,10 +39,10 @@ const Footer = () => {
             <button className={style.buttonOrderBuqet}>ЗАМОВИТИ БУКЕТ</button>
           </div>
           <div className={style.div3}>
-            <p className={style.contacts}>
+            <div className={style.contacts}>
               <p className={style.contact1}>+380 67 957 8784</p>
               <p className={style.contact2}>+380 99 144 2079</p>
-            </p>
+            </div>
             {screenWidth < 1200 && (
               <p className={style.timeForWork}>
                 пн-пт 9:00-19:00 сб-вс 9:00-18:00
