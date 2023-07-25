@@ -1,16 +1,9 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
-import { createPortal } from "react-dom";
+import styles from "./Modal.module.scss";
 
-export default function Modal({ children }) {
-  const ref = useRef(null);
-  const [mounted, setMounted] = useState(false);
+export default function Modal() {
+  console.log("Modal already open");
 
-  useEffect(() => {
-    ref.current = document.querySelector("#portal");
-    setMounted(true);
-  }, []);
-
-  return mounted ? createPortal(<>{children}</>, document.body) : null;
+  return <div className={styles.overlay}>dffdfdfdf</div>;
 }
