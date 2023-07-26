@@ -5,7 +5,7 @@ import Image from "next/image";
 import img from "../../../public/img/container/main-logo.png";
 import { useEffect, useState } from "react";
 import ListSocialIcons from "../../share/listSocialIcons/listSocialIcons";
-
+import ContactsPhones from "../../share/contactsPhones/ContactsPhones";
 const Footer = () => {
   const [screenWidth, setScreenWidth] = useState(0);
   useEffect(() => {
@@ -39,10 +39,7 @@ const Footer = () => {
             <button className={style.buttonOrderBuqet}>ЗАМОВИТИ БУКЕТ</button>
           </div>
           <div className={style.div3}>
-            <div className={style.contacts}>
-              <p className={style.contact1}>+380 67 957 8784</p>
-              <p className={style.contact2}>+380 99 144 2079</p>
-            </div>
+            <ContactsPhones view="footer" />
             {screenWidth < 1200 && (
               <p className={style.timeForWork}>
                 пн-пт 9:00-19:00 сб-вс 9:00-18:00

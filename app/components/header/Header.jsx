@@ -1,5 +1,5 @@
 "use client";
-import style from "./Header.module.scss";
+import styles from "./Header.module.scss";
 import Container from "../../share/container/Container";
 import Image from "next/image";
 import imgDesktop from "../../../public/img/container/main-logo-desktop.png";
@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import ModalWindow from "../modalWindow/ModalWindow";
 import MobileMenu from "../mobileMenu/MobileMenu";
 import ButtonBasket from "../../share/buttonBasket/ButtonBasket";
+import ContactsPhones from "../../share/contactsPhones/ContactsPhones";
 
 const Header = () => {
   const [showModal, setShowModal] = useState(false);
@@ -23,78 +24,75 @@ const Header = () => {
   };
 
   return (
-    <header className={style.header}>
+    <header className={styles.header}>
       <Container>
         {showModal ? (
           <ModalWindow setShowModal={setShowModal}>
-            <MobileMenu />
+            <MobileMenu setShowModal={setShowModal} />
           </ModalWindow>
         ) : null}
         {screenWidth === 0 && <p>loading</p>}
         {screenWidth > 0 && screenWidth <= 767 && (
-          <div className={style.headerContainer}>
+          <div className={styles.headerContainer}>
             <Image
               src={imgDesktop}
               alt="Main logo"
-              className={style.mainLogo}
+              className={styles.mainLogo}
             />
-            <p className={`${style.mainText} ${style.mainText_name}`}>
+            <p className={`${styles.mainText} ${styles.mainText_name}`}>
               Майстерня їстівних букетів “Your Angel”
             </p>
-            <p className={`${style.mainText} ${style.mainText_delivery}`}>
+            <p className={`${styles.mainText} ${styles.mainText_delivery}`}>
               Кур'єрськая доставка по Полтаві
             </p>
-            <p className={style.timeForWork}>
+            <p className={styles.timeForWork}>
               пн-пт 9:00-19:00 сб-вс 9:00-18:00
             </p>
-            <button className={style.buttonCallMe}>ПЕРЕДЗВОНІТЬ МЕНІ</button>
+            <button className={styles.buttonCallMe}>ПЕРЕДЗВОНІТЬ МЕНІ</button>
             <GiHamburgerMenu
-              className={style.iconMenu}
+              className={styles.iconMenu}
               onClick={showModalMenu}
             />
           </div>
         )}
         {screenWidth > 767 && (
-          <div className={style.headerContainer}>
-            <div className={style.mainInfo}>
-              <div className={style.infoAndTimeWork}>
-                <p className={`${style.mainText} ${style.mainText_name}`}>
+          <div className={styles.headerContainer}>
+            <div className={styles.mainInfo}>
+              <div className={styles.infoAndTimeWork}>
+                <p className={`${styles.mainText} ${styles.mainText_name}`}>
                   Майстерня їстівних букетів “Your Angel”
                 </p>
-                <p className={`${style.mainText} ${style.mainText_delivery}`}>
+                <p className={`${styles.mainText} ${styles.mainText_delivery}`}>
                   Кур'єрська доставка по Полтаві
                 </p>
-                <p className={style.timeForWork}>
+                <p className={styles.timeForWork}>
                   пн-пт 9:00-19:00 сб-вс 9:00-18:00
                 </p>
               </div>
-              <div className={style.logoAndButton}>
+              <div className={styles.logoAndButton}>
                 <Image
                   src={imgDesktop}
                   alt="Main logo"
-                  className={style.mainLogo}
+                  className={styles.mainLogo}
                 />
                 {screenWidth < 1200 && (
-                  <button className={style.buttonCallMe}>
+                  <button className={styles.buttonCallMe}>
                     ПЕРЕДЗВОНІТЬ МЕНІ
                   </button>
                 )}
               </div>
-              <div className={style.contactsAndBasket}>
+              <div className={styles.contactsAndBasket}>
                 <ListSocialIcons size={screenWidth < 1200 ? 30 : 48} />
-                <p className={style.contacts}>
-                  <p className={style.contact1}>+380 67 957 8784</p>
-                  <p className={style.contact2}>+380 99 144 2079</p>
-                </p>
+                <ContactsPhones view="header" />
                 {screenWidth < 1200 && <ButtonBasket view="screen" />}
                 {screenWidth >= 1200 && (
-                  <button className={style.buttonCallMe}>
+                  <button className={styles.buttonCallMe}>
                     ПЕРЕДЗВОНІТЬ МЕНІ
                   </button>
                 )}
               </div>
             </div>
-            <div className={style.navigation}>
+            <div className={styles.navigation}>
               <ListNavigation view="screen" />
               {screenWidth >= 1200 && <ButtonBasket view="screen" />}
             </div>
