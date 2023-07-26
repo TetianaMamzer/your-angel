@@ -15,7 +15,7 @@ const MobileMenu = ({ setShowModal }) => {
       <ListNavigation view="menu" />
       <ButtonBasket view="menu" />
       <ContactsPhones view="menu" />
-      <ListSocialIcons size={30} />
+      <ListSocialIcons size={30} view="menu" />
     </div>
   );
 };
