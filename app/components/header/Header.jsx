@@ -8,6 +8,8 @@ import ListSocialIcons from "../../share/listSocialIcons/listSocialIcons";
 import ListNavigation from "../../share/listNavigation/listNavigation";
 import { useEffect, useState } from "react";
 import ModalWindow from "../modalWindow/ModalWindow";
+import MobileMenu from "../mobileMenu/MobileMenu";
+import ButtonBasket from "../../share/buttonBasket/ButtonBasket";
 
 const Header = () => {
   const [showModal, setShowModal] = useState(false);
@@ -23,7 +25,11 @@ const Header = () => {
   return (
     <header className={style.header}>
       <Container>
-        {showModal ? <ModalWindow setShowModal={setShowModal} /> : null}
+        {showModal ? (
+          <ModalWindow setShowModal={setShowModal}>
+            <MobileMenu />
+          </ModalWindow>
+        ) : null}
         {screenWidth === 0 && <p>loading</p>}
         {screenWidth > 0 && screenWidth <= 767 && (
           <div className={style.headerContainer}>
@@ -80,9 +86,7 @@ const Header = () => {
                   <p className={style.contact1}>+380 67 957 8784</p>
                   <p className={style.contact2}>+380 99 144 2079</p>
                 </p>
-                {screenWidth < 1200 && (
-                  <button className={style.buttonBasket}>КОШИК</button>
-                )}
+                {screenWidth < 1200 && <ButtonBasket view="screen" />}
                 {screenWidth >= 1200 && (
                   <button className={style.buttonCallMe}>
                     ПЕРЕДЗВОНІТЬ МЕНІ
@@ -91,10 +95,8 @@ const Header = () => {
               </div>
             </div>
             <div className={style.navigation}>
-              <ListNavigation />
-              {screenWidth >= 1200 && (
-                <button className={style.buttonBasket}>КОШИК</button>
-              )}
+              <ListNavigation view="screen" />
+              {screenWidth >= 1200 && <ButtonBasket view="screen" />}
             </div>
           </div>
         )}

@@ -1,0 +1,21 @@
+.buttonBasketScreen {
+  font-size: 14px;
+  line-height: 1.12;
+  margin-top: auto;
+  color: inherit;
+  background-color: var(--light-color);
+
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+    margin-top: 0;
+    font-weight: 700;
+    font-family: inherit;
+  }
+}
+
+.buttonBasketMenu {
+  font-size: 24px;
+  line-height: 1.12;
+  color: inherit;
+  background-color: inherit;
+}
