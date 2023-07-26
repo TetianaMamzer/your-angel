@@ -50,10 +50,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 15px;
 
-  /* & li:not(:last-child) {
+  & li:not(:last-child) {
     margin-bottom: 15px;
-  } */
+  }
 }
 
 .navigationItemScreen {
@@ -68,7 +70,6 @@
 }
 
 .navigationItemMenu {
-  
   line-height: 1.12;
   &:hover {
     text-decoration: underline;
