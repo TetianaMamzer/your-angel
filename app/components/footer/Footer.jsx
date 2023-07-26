@@ -45,7 +45,7 @@ const Footer = () => {
                 пн-пт 9:00-19:00 сб-вс 9:00-18:00
               </p>
             )}
-            {screenWidth >= 1200 && <ListSocialIcons size="60" />}
+            {screenWidth >= 1200 && <ListSocialIcons size="60" view="screen"/>}
           </div>
         </div>
       </Container>

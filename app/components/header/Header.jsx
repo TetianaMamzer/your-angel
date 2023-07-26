@@ -82,7 +82,7 @@ const Header = () => {
                 )}
               </div>
               <div className={styles.contactsAndBasket}>
-                <ListSocialIcons size={screenWidth < 1200 ? 30 : 48} />
+                <ListSocialIcons size={screenWidth < 1200 ? 30 : 48} view="screen"/>
                 <ContactsPhones view="header" />
                 {screenWidth < 1200 && <ButtonBasket view="screen" />}
                 {screenWidth >= 1200 && (

@@ -1,4 +1,4 @@
-import style from "./listSocialIcons.module.scss";
+import styles from "./listSocialIcons.module.scss";
 import Image from "next/image";
 import instagram from "../../../public/img/iconsSocial/icon-instagram.png";
 import facebook from "../../../public/img/iconsSocial/icon-facebook.png";
@@ -29,9 +29,26 @@ const icons = [
   },
 ];
 
-const ListSocialIcons = ({ size = "30" }) => {
+const ListSocialIcons = ({ size = "30", view }) => {
+  let style;
+
+  switch (view) {
+    case "screen":
+      style = styles.socialIconsScreen;
+
+      break;
+
+    case "menu":
+      style = styles.socialIconsMenu;
+
+      break;
+
+    default:
+      style = "";
+  }
+
   return (
-    <ul className={style.listIcons}>
+    <ul className={style}>
       {icons.map((icon) => {
         return (
           <li key={icon.id}>
