@@ -51,11 +51,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  margin-bottom: 15px;
-
-  & li:not(:last-child) {
-    margin-bottom: 15px;
-  }
+  margin-bottom: 0;
 }
 
 .navigationItemScreen {
