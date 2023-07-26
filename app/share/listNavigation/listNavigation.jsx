@@ -1,4 +1,4 @@
-import style from "./listNavigation.module.scss";
+import styles from "./listNavigation.module.scss";
 
 const navigations = [
   {
@@ -28,12 +28,31 @@ const navigations = [
   },
 ];
 
-const ListNavigation = () => {
+const ListNavigation = ({ view }) => {
+  let styleList;
+  let styleItem;
+
+  switch (view) {
+    case "screen":
+      styleList = styles.navigationListScreen;
+      styleItem = styles.navigationItemScreen;
+      break;
+
+    case "menu":
+      styleList = styles.navigationListMenu;
+      styleItem = styles.navigationItemMenu;
+      break;
+
+    default:
+      styleList = "";
+      styleItem = "";
+  }
+
   return (
-    <ul className={style.listNavigation}>
+    <ul className={styleList}>
       {navigations.map((item) => {
         return (
-          <li key={item.id} className={style.navigationItem}>
+          <li key={item.id} className={styleItem}>
             <a href={`#${item.href}`}>{item.name}</a>
           </li>
         );

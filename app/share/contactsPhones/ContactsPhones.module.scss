@@ -1,0 +1,64 @@
+.contactsHeader {
+  font-size: 16px;
+  line-height: 2;
+  width: 150px;
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 18px;
+    line-height: 1.12;
+    width: 400px;
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  & .contact1 {
+    margin-right: 0;
+
+    @media screen and (min-width: 1200px) {
+      margin-right: 20px;
+      display: inline-block;
+    }
+  }
+
+  & .contact2 {
+    margin-right: 0;
+
+    @media screen and (min-width: 1200px) {
+      margin-right: 10px;
+      display: inline-block;
+    }
+  }
+}
+
+.contactsFooter {
+  font-size: 12px;
+  line-height: 1.12;
+  max-width: 100px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  @media screen and (min-width: 767px) and (max-width: 1199px) {
+    font-size: 24px;
+    line-height: 1.12;
+    max-width: 200px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 24px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+}
+
+.contactsMenu {
+  line-height: 1.12;
+  /* & .contact1 {
+    margin-bottom: 20px;
+  } */
+}

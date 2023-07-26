@@ -147,55 +147,6 @@
   padding-bottom: 20px;
 }
 
-.contacts {
-  font-size: 16px;
-  line-height: 2;
-  width: 150px;
-  text-align: center;
-
-  @media screen and (min-width: 1200px) {
-    font-size: 18px;
-    line-height: 1.12;
-    width: 400px;
-    text-align: center;
-    margin-bottom: 80px;
-  }
-}
-
-.contact1 {
-  margin-right: 0;
-
-  @media screen and (min-width: 1200px) {
-    margin-right: 20px;
-    display: inline-block;
-  }
-}
-
-.contact2 {
-  margin-right: 0;
-
-  @media screen and (min-width: 1200px) {
-    margin-right: 10px;
-    display: inline-block;
-  }
-}
-
-.buttonBasket {
-  font-size: 14px;
-  line-height: 1.12;
-  margin-top: auto;
-  color: inherit;
-  font-weight: inherit;
-  background-color: var(--light-color);
-
-  @media screen and (min-width: 1200px) {
-    font-size: 16px;
-    margin-top: 0;
-    font-weight: 700;
-    font-family: inherit;
-  }
-}
-
 .navigation {
   width: 100%;
   display: flex;
