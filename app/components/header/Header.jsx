@@ -7,7 +7,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import ListSocialIcons from "../../share/listSocialIcons/listSocialIcons";
 import ListNavigation from "../../share/listNavigation/listNavigation";
 import { useEffect, useState } from "react";
-import Modal from "../modal/Modal";
+import ModalWindow from "../modalWindow/ModalWindow";
 
 const Header = () => {
   const [showModal, setShowModal] = useState(false);
@@ -17,14 +17,13 @@ const Header = () => {
   }, []);
 
   const showModalMenu = () => {
-    console.log("open Modal");
     setShowModal(true);
   };
 
   return (
     <header className={style.header}>
       <Container>
-        {showModal ? <Modal /> : null}
+        {showModal ? <ModalWindow setShowModal={setShowModal} /> : null}
         {screenWidth === 0 && <p>loading</p>}
         {screenWidth > 0 && screenWidth <= 767 && (
           <div className={style.headerContainer}>
