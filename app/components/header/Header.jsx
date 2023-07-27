@@ -9,17 +9,23 @@ import ListNavigation from "../../share/listNavigation/listNavigation";
 import { useEffect, useState } from "react";
 import ModalWindow from "../modalWindow/ModalWindow";
 import MobileMenu from "../mobileMenu/MobileMenu";
+import CallBackMenu from "../callBackMenu/CallBackMenu";
 import ButtonBasket from "../../share/buttonBasket/ButtonBasket";
 import ContactsPhones from "../../share/contactsPhones/ContactsPhones";
 
 const Header = () => {
   const [showModal, setShowModal] = useState(false);
+  const [showCallBackMenu, setShowCallBackMenu] = useState(false);
   const [screenWidth, setScreenWidth] = useState(0);
   useEffect(() => {
     setScreenWidth(window.innerWidth);
   }, []);
 
-  const showModalMenu = () => {
+  const showModalMenu = (e) => {
+    if (e.target.getAttribute("class")?.includes("buttonCallMe")) {
+      setShowCallBackMenu(true);
+    }
+
     setShowModal(true);
   };
 
@@ -27,8 +33,15 @@ const Header = () => {
     <header className={styles.header}>
       <Container>
         {showModal ? (
-          <ModalWindow setShowModal={setShowModal}>
-            <MobileMenu setShowModal={setShowModal} />
+          <ModalWindow
+            setShowModal={setShowModal}
+            setShowCallBackMenu={setShowCallBackMenu}
+          >
+            {showCallBackMenu ? (
+              <CallBackMenu setShowModal={setShowModal} />
+            ) : (
+              <MobileMenu setShowModal={setShowModal} />
+            )}
           </ModalWindow>
         ) : null}
         {screenWidth === 0 && <p>loading</p>}
@@ -48,7 +61,9 @@ const Header = () => {
             <p className={styles.timeForWork}>
               пн-пт 9:00-19:00 сб-вс 9:00-18:00
             </p>
-            <button className={styles.buttonCallMe}>ПЕРЕДЗВОНІТЬ МЕНІ</button>
+            <button className={styles.buttonCallMe} onClick={showModalMenu}>
+              ПЕРЕДЗВОНІТЬ МЕНІ
+            </button>
             <GiHamburgerMenu
               className={styles.iconMenu}
               onClick={showModalMenu}
@@ -76,13 +91,16 @@ const Header = () => {
                   className={styles.mainLogo}
                 />
                 {screenWidth < 1200 && (
-                  <button className={styles.buttonCallMe}>
+                  <button className={styles.buttonCallMe} callMe>
                     ПЕРЕДЗВОНІТЬ МЕНІ
                   </button>
                 )}
               </div>
               <div className={styles.contactsAndBasket}>
-                <ListSocialIcons size={screenWidth < 1200 ? 30 : 48} view="screen"/>
+                <ListSocialIcons
+                  size={screenWidth < 1200 ? 30 : 48}
+                  view="screen"
+                />
                 <ContactsPhones view="header" />
                 {screenWidth < 1200 && <ButtonBasket view="screen" />}
                 {screenWidth >= 1200 && (

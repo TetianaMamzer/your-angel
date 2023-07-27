@@ -4,14 +4,19 @@ import { AiOutlineCloseCircle } from "react-icons/ai";
 import styles from "./ModalWindow.module.scss";
 import { useEffect } from "react";
 
-export default function ModalWindow({ setShowModal, children }) {
+export default function ModalWindow({
+  setShowModal,
+  setShowCallBackMenu,
+  children,
+}) {
   useEffect(() => {
     const closeModal = (e) => {
-      if (e.target.getAttribute("class")?.includes("backdrop")) {
+      if (
+        e.target.getAttribute("class")?.includes("backdrop") ||
+        e.code === "Escape"
+      ) {
         setShowModal(false);
-      }
-      if (e.code === "Escape") {
-        setShowModal(false);
+        setShowCallBackMenu(false);
       }
     };
 
@@ -33,6 +38,7 @@ export default function ModalWindow({ setShowModal, children }) {
         className={styles.closeModalIcon}
         onClick={() => {
           setShowModal(false);
+          setShowCallBackMenu(false);
         }}
       />
       <div className={styles.modal}>{children}</div>
