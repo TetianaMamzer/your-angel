@@ -38,6 +38,7 @@ export default function ModalWindow({
         className={styles.closeModalIcon}
         onClick={() => {
           setShowModal(false);
+          setShowCallBackMenu(false);
         }}
       />
       <div className={styles.modal}>{children}</div>

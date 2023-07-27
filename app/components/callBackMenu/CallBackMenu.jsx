@@ -6,7 +6,11 @@ const CallBackMenu = () => {
       setShowModal(false);
     }
   }; */
-  return <div className={styles.callBackMenu}>CallBackMenu</div>;
+  return (
+    <div className={styles.callBackMenu}>
+      <h1 className={styles.headline}>ВВЕДІТЬ НЕОБХІДНІ ДАНІ І З ВАМИ ЗВ’ЯЖУТЬСЯ ЗА 10 ХВИЛИН!</h1>
+    </div>
+  );
 };
 
 export default CallBackMenu;
