@@ -56,6 +56,7 @@ const CallBackMenu = () => {
               className={styles.input}
               placeholder="ЕЛ. ПОШТА"
             />
+            <p className={styles.nessesaryField}></p>
             {/* <ErrorMessage
               name="email"
               render={(message) => (
