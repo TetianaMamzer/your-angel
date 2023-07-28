@@ -91,7 +91,10 @@ const Header = () => {
                   className={styles.mainLogo}
                 />
                 {screenWidth < 1200 && (
-                  <button className={styles.buttonCallMe} callMe>
+                  <button
+                    className={styles.buttonCallMe}
+                    onClick={showModalMenu}
+                  >
                     ПЕРЕДЗВОНІТЬ МЕНІ
                   </button>
                 )}
@@ -104,7 +107,10 @@ const Header = () => {
                 <ContactsPhones view="header" />
                 {screenWidth < 1200 && <ButtonBasket view="screen" />}
                 {screenWidth >= 1200 && (
-                  <button className={styles.buttonCallMe}>
+                  <button
+                    className={styles.buttonCallMe}
+                    onClick={showModalMenu}
+                  >
                     ПЕРЕДЗВОНІТЬ МЕНІ
                   </button>
                 )}
