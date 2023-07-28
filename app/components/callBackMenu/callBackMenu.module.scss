@@ -4,9 +4,15 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  padding-top: 40px;
 
   & :not(p, h1, label, form) {
-    margin-top: calc((100vh) / 15);
+    /* margin-top: calc((100vh) / 15); */
+    margin-top: 30px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 80%;
   }
 }
 
@@ -41,7 +47,7 @@
 }
 
 .inputPhone {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .nessesaryField {

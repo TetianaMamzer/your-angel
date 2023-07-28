@@ -4,7 +4,7 @@ import * as Yup from "yup";
 
 import styles from "./callBackMenu.module.scss";
 
-const CallBackMenu = () => {
+const CallBackMenu = ({ setShowModal }) => {
   const CallBackSchema = Yup.object().shape({
     name: Yup.string().required("Будь ласка, введіть Ваше ім'я"),
     phone: Yup.string().required("Будь ласка, введіть Ваш контактний телефон"),
@@ -13,8 +13,9 @@ const CallBackMenu = () => {
 
   const submitForm = (values, actions) => {
     actions.resetForm();
-    console.log(values);
+    setShowModal(false);
   };
+
   return (
     <div className={styles.callBackMenu}>
       <h1 className={styles.headline}>
