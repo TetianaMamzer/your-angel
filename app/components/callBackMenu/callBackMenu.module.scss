@@ -1,7 +1,7 @@
 .callBackMenu {
-  width: 80%;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   margin: 0 auto;
 }
 
@@ -9,4 +9,51 @@
   font-size: 12px;
   line-height: 1.12;
   text-align: center;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.label {
+  width: 90%;
+}
+
+.input {
+  font-size: 24px;
+  line-height: 1.12;
+  color: #71478766;
+  padding: 5px 10px;
+  border: 3px solid var(--primary-color);
+  border-radius: 10px;
+  width: 100%;
+
+  &::placeholder {
+    color: #71478766;
+  }
+}
+
+.inputPhone {
+  font-size: 20px;
+}
+
+.nessesaryField {
+  color: #eb5757;
+  font-size: 12px;
+  line-height: 1.12;
+}
+
+.submit {
+  display: block;
+  width: 100%;
+  font-size: 24px;
+  line-height: 1.12;
+  color: #ffffff;
+  background-color: var(--primary-color);
+  padding: 10px;
+  text-align: center;
+  text-decoration: underline;
+  border-radius: 10px;
 }
