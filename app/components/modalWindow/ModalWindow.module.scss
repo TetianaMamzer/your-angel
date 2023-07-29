@@ -1,15 +1,21 @@
 .backdrop {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
+  background: 0, 5;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-y: auto;
+}
+
+.modal {
+  position: absolute;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
   background-color: #cec1d4;
-  z-index: 2;
   padding: 30px 20px;
 
   @media screen and (min-width: 768px) {
@@ -19,18 +25,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 20px;
-  }
-}
-
-.modal {
-  position: relative;
-  border-radius: 10px;
-  width: 100%;
-  height: 100%;
-  padding-bottom: 5px;
-
-  @media screen and (min-width: 768px) {
-    width: 400px;
   }
 }
 

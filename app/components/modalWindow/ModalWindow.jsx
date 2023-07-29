@@ -34,14 +34,16 @@ export default function ModalWindow({
 
   return (
     <div className={styles.backdrop}>
-      <AiOutlineCloseCircle
-        className={styles.closeModalIcon}
-        onClick={() => {
-          setShowModal(false);
-          setShowCallBackMenu(false);
-        }}
-      />
-      <div className={styles.modal}>{children}</div>
+      <div className={styles.modal}>
+        <AiOutlineCloseCircle
+          className={styles.closeModalIcon}
+          onClick={() => {
+            setShowModal(false);
+            setShowCallBackMenu(false);
+          }}
+        />
+        {children}
+      </div>
     </div>
   );
 }
