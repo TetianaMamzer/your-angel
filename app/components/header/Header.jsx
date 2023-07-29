@@ -43,6 +43,7 @@ const Header = () => {
             setShowCallBackMenu={setShowCallBackMenu}
             setShowConfirmCallBack={setShowConfirmCallBack}
             setShowMobileMenu={setShowMobileMenu}
+            showConfirmCallBack={showConfirmCallBack}
           >
             {showCallBackMenu && (
               <CallBackMenu

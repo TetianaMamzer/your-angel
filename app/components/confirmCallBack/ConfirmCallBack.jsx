@@ -1,13 +1,16 @@
 import styles from "./confirmCallBack.module.scss";
 
-const ConfirmCallBack = () => {
+const ConfirmCallBack = ({ children }) => {
   return (
-    <p className={styles.message}>
-      ВАША ЗАЯВКА ПРИЙНЯТА! <br />
-      ВАМ ЗАТЕЛЕФОНУЮТЬ <br />
-      ПРОТЯГОМ 10 ХВИЛИН В РОБОЧІ ГОДИНИ! <br />
-      ГАРНОГО ДНЯ!
-    </p>
+    <div className={styles.confirmCallBack}>
+      {children}
+      <p className={styles.message}>
+        ВАША ЗАЯВКА ПРИЙНЯТА! <br />
+        ВАМ ЗАТЕЛЕФОНУЮТЬ <br />
+        ПРОТЯГОМ 10 ХВИЛИН В РОБОЧІ ГОДИНИ! <br />
+        ГАРНОГО ДНЯ!
+      </p>
+    </div>
   );
 };
 
