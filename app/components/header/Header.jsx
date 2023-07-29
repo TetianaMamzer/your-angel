@@ -10,12 +10,15 @@ import { useEffect, useState } from "react";
 import ModalWindow from "../modalWindow/ModalWindow";
 import MobileMenu from "../mobileMenu/MobileMenu";
 import CallBackMenu from "../callBackMenu/CallBackMenu";
+import ConfirmCallBack from "../confirmCallBack/ConfirmCallBack";
 import ButtonBasket from "../../share/buttonBasket/ButtonBasket";
 import ContactsPhones from "../../share/contactsPhones/ContactsPhones";
 
 const Header = () => {
   const [showModal, setShowModal] = useState(false);
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [showCallBackMenu, setShowCallBackMenu] = useState(false);
+  const [showConfirmCallBack, setShowConfirmCallBack] = useState(false);
   const [screenWidth, setScreenWidth] = useState(0);
   useEffect(() => {
     setScreenWidth(window.innerWidth);
@@ -24,6 +27,8 @@ const Header = () => {
   const showModalMenu = (e) => {
     if (e.target.getAttribute("class")?.includes("buttonCallMe")) {
       setShowCallBackMenu(true);
+    } else {
+      setShowMobileMenu(true);
     }
 
     setShowModal(true);
@@ -36,12 +41,18 @@ const Header = () => {
           <ModalWindow
             setShowModal={setShowModal}
             setShowCallBackMenu={setShowCallBackMenu}
+            setShowConfirmCallBack={setShowConfirmCallBack}
+            setShowMobileMenu={setShowMobileMenu}
           >
-            {showCallBackMenu ? (
-              <CallBackMenu setShowModal={setShowModal} />
-            ) : (
-              <MobileMenu setShowModal={setShowModal} />
+            {showCallBackMenu && (
+              <CallBackMenu
+                setShowModal={setShowModal}
+                setShowConfirmCallBack={setShowConfirmCallBack}
+                setShowCallBackMenu={setShowCallBackMenu}
+              />
             )}
+            {showMobileMenu && <MobileMenu />}
+            {showConfirmCallBack && <ConfirmCallBack />}
           </ModalWindow>
         ) : null}
         {screenWidth === 0 && <p>loading</p>}

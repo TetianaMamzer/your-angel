@@ -7,6 +7,8 @@ import { useEffect } from "react";
 export default function ModalWindow({
   setShowModal,
   setShowCallBackMenu,
+  setShowConfirmCallBack,
+  setShowMobileMenu,
   children,
 }) {
   useEffect(() => {
@@ -17,6 +19,7 @@ export default function ModalWindow({
       ) {
         setShowModal(false);
         setShowCallBackMenu(false);
+        setShowConfirmCallBack(false);
       }
     };
 
@@ -40,6 +43,8 @@ export default function ModalWindow({
           onClick={() => {
             setShowModal(false);
             setShowCallBackMenu(false);
+            setShowConfirmCallBack(false);
+            setShowMobileMenu(false);
           }}
         />
         {children}
