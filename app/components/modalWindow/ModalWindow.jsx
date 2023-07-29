@@ -1,12 +1,16 @@
 "use client";
 
 import { AiOutlineCloseCircle } from "react-icons/ai";
+import ConfirmCallBack from "../confirmCallBack/ConfirmCallBack";
 import styles from "./ModalWindow.module.scss";
 import { useEffect } from "react";
 
 export default function ModalWindow({
   setShowModal,
   setShowCallBackMenu,
+  setShowConfirmCallBack,
+  setShowMobileMenu,
+  showConfirmCallBack,
   children,
 }) {
   useEffect(() => {
@@ -17,6 +21,7 @@ export default function ModalWindow({
       ) {
         setShowModal(false);
         setShowCallBackMenu(false);
+        setShowConfirmCallBack(false);
       }
     };
 
@@ -34,14 +39,31 @@ export default function ModalWindow({
 
   return (
     <div className={styles.backdrop}>
-      <AiOutlineCloseCircle
-        className={styles.closeModalIcon}
-        onClick={() => {
-          setShowModal(false);
-          setShowCallBackMenu(false);
-        }}
-      />
-      <div className={styles.modal}>{children}</div>
+      {showConfirmCallBack ? (
+        <ConfirmCallBack>
+          <AiOutlineCloseCircle
+            className={styles.closeModalIcon}
+            onClick={() => {
+              setShowModal(false);
+              setShowCallBackMenu(false);
+              setShowConfirmCallBack(false);
+              setShowMobileMenu(false);
+            }}
+          />
+        </ConfirmCallBack>
+      ) : (
+        <div className={styles.modal}>
+          <AiOutlineCloseCircle
+            className={styles.closeModalIcon}
+            onClick={() => {
+              setShowModal(false);
+              setShowCallBackMenu(false);
+              setShowMobileMenu(false);
+            }}
+          />
+          {children}
+        </div>
+      )}
     </div>
   );
 }
