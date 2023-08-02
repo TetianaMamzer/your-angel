@@ -1,7 +1,7 @@
-import style from "./main.module.scss";
+import style from "./Hero.module.scss";
 import Container from "@/app/share/container/Container";
 
-const Main = () => {
+const Hero = () => {
   const location = "https://goo.gl/maps/ZJZfS61p7HjnXdkG7";
 
   return (
@@ -25,4 +25,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Hero;
