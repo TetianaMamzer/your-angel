@@ -2,9 +2,11 @@
 import style from "./SearchModal.module.scss";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { useEffect } from "react";
+import SearchModalItem from "../searchModalItem/SearchModalItem";
 
-export default function SearchModal({ setCloseModal, item }) {
-    
+const SearchModal = ({ setCloseModal, cаtegoryItem }) => {
+  const bouquetsItem = cаtegoryItem.bouquets;
+
   useEffect(() => {
     const closeModal = (e) => {
       if (
@@ -36,8 +38,13 @@ export default function SearchModal({ setCloseModal, item }) {
             setCloseModal(null);
           }}
         />
-        <p>{item.cаtegoryName}</p>
+        <div className={style.contentWrapper}>
+          <p className={style.categoryTitle}>{cаtegoryItem.cаtegoryName}</p>
+          <SearchModalItem bouquetsItem={bouquetsItem} />
+        </div>
       </div>
     </div>
   );
-}
+};
+
+export default SearchModal;

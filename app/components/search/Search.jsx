@@ -10,20 +10,20 @@ import { bouquets } from "./bouquets.js";
 const Search = () => {
   const [selectedItem, setSelectedItem] = useState(null);
   
-  const openModal = (item) => {
-    setSelectedItem(item);
+  const openModal = (cаtegoryItem) => {
+    setSelectedItem(cаtegoryItem);
   };
   
-  const elements = bouquets.map((item) => (
-    <li key={item.id} className={style.item}>
-      <a className={style.itemLink} onClick={() => openModal(item)}>
+  const elements = bouquets.map((cаtegoryItem) => (
+    <li key={cаtegoryItem.id} className={style.item}>
+      <a className={style.itemLink} onClick={() => openModal(cаtegoryItem)}>
         <div className={style.itemTitleWrapper}>
-          <h3>{item.cаtegoryName}</h3>
+          <h3>{cаtegoryItem.cаtegoryName}</h3>
         </div>
         <div className={style.imageWrapper}>
           <img
             className={style.image}
-            src={item.categoryURL}
+            src={cаtegoryItem.categoryURL}
             alt="category-image"
           />
         </div>
@@ -35,7 +35,10 @@ const Search = () => {
     <section id="search" className={style.section}>
       <Container>
         {selectedItem && (
-          <SearchModal setCloseModal={setSelectedItem} item={selectedItem} />
+          <SearchModal
+            setCloseModal={setSelectedItem}
+            cаtegoryItem={selectedItem}
+          />
         )}
         <h2 className={style.title}>Швидкий пошук</h2>
         <p className={style.text}>
