@@ -1,0 +1,102 @@
+.contentWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.imageWrapper {
+    width: 512px;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    
+}
+.image {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+.btnWrapper {
+    width: 512px;
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+}
+.btnPrev {
+    margin-right: auto;
+    width: 50px;
+    height: 80px;
+    border-radius: 0 15px 15px 0;
+    background: rgba(255, 255, 255, 0.90);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.70);
+    }
+}
+.btnNext {
+    width: 50px;
+    height: 80px;
+    border-radius: 15px 0 0 15px;
+    background: rgba(255, 255, 255, 0.90);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+        &:hover {
+            background: rgba(255, 255, 255, 0.65);
+        }
+
+}
+.btnArrow {
+    fill: var(--primary-color);
+}
+.textWrapper {
+    width: 512px;
+    height: 320px;
+    border-radius: 30px;
+    border: 2px solid var(--primary-color);
+}
+.titleWrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -12px;
+}
+.title {
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background-color: var(--light-color);      
+}
+
+
+.detailsWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 96px;
+}
+.detailsBlock {
+    width: 160px;
+    height: 240px;
+    border-radius: 15px;
+    border: 1px solid #CEC1D4;
+    background: var(--light-color);
+
+}
+.comment {
+    color: #EB5757;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 6px 32px 0 48px;
+}
