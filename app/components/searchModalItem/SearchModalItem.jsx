@@ -17,6 +17,14 @@ const SearchModalItem = ({ bouquetsItem }) => {
     const handleNext = () => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % bouquetsItem.length);
     };
+
+    const ingredients = bouquetsItem[activeIndex].ingredients;
+
+    const elements = ingredients.map((ingredient) => (
+      <li key={ingredient.id} className={style.ingredient}>
+        <p>{ingredient.name}</p>
+      </li>
+    ));
     
     return (
       <div className={style.contentWrapper}>
@@ -58,7 +66,11 @@ const SearchModalItem = ({ bouquetsItem }) => {
             <p className={style.title}>"{bouquetsItem[activeIndex].name}"</p>
           </div>
           <div className={style.detailsWrapper}>
-            <div className={style.detailsBlock}></div>
+                    <div className={style.detailsBlock}>
+                        <ul>
+                            {elements}
+                        </ul>
+            </div>
             <div className={style.detailsBlock}></div>
           </div>
             <p className={style.comment}>
