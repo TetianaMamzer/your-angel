@@ -66,17 +66,38 @@ const SearchModalItem = ({ bouquetsItem }) => {
             <p className={style.title}>"{bouquetsItem[activeIndex].name}"</p>
           </div>
           <div className={style.detailsWrapper}>
-                    <div className={style.detailsBlock}>
-                        <ul>
-                            {elements}
-                        </ul>
+            <div className={style.ingredientslsBlock}>
+              <p className={style.ingredientsTitle}>Склад:</p>
+              <ul>{elements}</ul>
+              <p className={style.ingredientsWarnings}>
+                {bouquetsItem[activeIndex].warnings}
+              </p>
+              <p>{bouquetsItem[activeIndex].details}</p>
             </div>
-            <div className={style.detailsBlock}></div>
+            <div className={style.detailsBlock}>
+              <ul className={style.detailsList}>
+                <li>
+                  <p>
+                    Розмір: {bouquetsItem[activeIndex].width}смx
+                    {bouquetsItem[activeIndex].height}см
+                  </p>
+                </li>
+                <li>
+                  <p>Вага: до {bouquetsItem[activeIndex].weight} кг</p>
+                </li>
+                <li>
+                  <p>Сезонність: {bouquetsItem[activeIndex].season}</p>
+                </li>
+                <li>
+                  <p>Ціна: {bouquetsItem[activeIndex].price} грн</p>
+                </li>
+              </ul>
+            </div>
           </div>
-            <p className={style.comment}>
-              *букет може відрізнятися по складу на 20% у зв’язку з
-              сезонністю/наявністю компонентів
-            </p>
+          <p className={style.comment}>
+            *букет може відрізнятися по складу на 20% у зв’язку з
+            сезонністю/наявністю компонентів
+          </p>
         </div>
       </div>
     );
