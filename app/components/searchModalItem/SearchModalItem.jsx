@@ -1,6 +1,7 @@
 "use client";
 import style from "./SearchModalItem.module.scss";
 import { useState } from "react";
+import StatusBar from "../../share/StatusBar/StatusBar";
 // import Image from "next/image";
 
 
@@ -60,6 +61,12 @@ const SearchModalItem = ({ bouquetsItem }) => {
               </span>
             </button>
           </div>
+         
+            <StatusBar
+              activeIndex={activeIndex}
+              totalItems={bouquetsItem.length}
+            />
+        
         </div>
         <div className={style.textWrapper}>
           <div className={style.titleWrapper}>
