@@ -62,12 +62,11 @@ const SearchModalItem = ({ bouquetsItem }) => {
               </span>
             </button>
           </div>
-         
-            <StatusBar
-              activeIndex={activeIndex}
-              totalItems={bouquetsItem.length}
-            />
-        
+
+          <StatusBar
+            activeIndex={activeIndex}
+            totalItems={bouquetsItem.length}
+          />
         </div>
         <div className={style.textWrapper}>
           <div className={style.titleWrapper}>
@@ -99,10 +98,13 @@ const SearchModalItem = ({ bouquetsItem }) => {
                 <li>
                   <p>Ціна: {bouquetsItem[activeIndex].price} грн</p>
                 </li>
-                        </ul>
-                        <div>
-                            <Counter />
-                        </div>
+              </ul>
+              <div>
+                <Counter />
+                <button className={style.orderBtn}>
+                  Замовити
+                </button>
+              </div>
             </div>
           </div>
           <p className={style.comment}>
