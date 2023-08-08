@@ -1,7 +1,8 @@
 "use client";
 import style from "./SearchModalItem.module.scss";
 import { useState } from "react";
-import StatusBar from "../../share/StatusBar/StatusBar";
+import StatusBar from "../../share/statusBar/StatusBar";
+import Counter from "@/app/share/counter/Counter";
 // import Image from "next/image";
 
 
@@ -98,7 +99,10 @@ const SearchModalItem = ({ bouquetsItem }) => {
                 <li>
                   <p>Ціна: {bouquetsItem[activeIndex].price} грн</p>
                 </li>
-              </ul>
+                        </ul>
+                        <div>
+                            <Counter />
+                        </div>
             </div>
           </div>
           <p className={style.comment}>
