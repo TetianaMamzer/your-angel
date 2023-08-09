@@ -92,7 +92,7 @@ const SearchModalItem = ({ bouquetsItem }) => {
                 <li>
                   <p>Вага: до {bouquetsItem[activeIndex].weight} кг</p>
                 </li>
-                <li>
+                <li className={style.seasonsItem}>
                   <p>Сезонність: {bouquetsItem[activeIndex].season}</p>
                 </li>
                 <li>
@@ -101,9 +101,7 @@ const SearchModalItem = ({ bouquetsItem }) => {
               </ul>
               <div>
                 <Counter />
-                <button className={style.orderBtn}>
-                  Замовити
-                </button>
+                <button className={style.orderBtn}>Замовити</button>
               </div>
             </div>
           </div>
